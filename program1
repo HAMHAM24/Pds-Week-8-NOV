@@ -1,0 +1,33 @@
+#include <iostream>
+#include <cmath>
+#define phi 3.14;
+using namespace std;
+
+int main(){
+    double a, x, y, r, alfa, beta, luas, totalSudut;
+
+    cout << endl;
+    cout << "MASUKKAN NILAI X (Alas)    : "; cin >> x;
+    cout << "MASUKKAN NILAI Y (Tinggi)  : "; cin >> y;
+    cout << endl;
+    
+    // Menghitung r (sisi miring segitiga)
+    r = sqrt((pow(x,2))+(pow(y,2)));
+    // Rumus Mencari Sudut α
+    a = asin(y/r);
+    alfa = a*180/phi;
+    // Rumus Mencari Sudut β
+    beta = 180 - 90 - alfa;
+    // Rumus Mencari Luas Segitiga
+    luas = 0.5*x*y;
+    // Menghitung Total Sudut Untuk Pembuktian Apakah Jumlah Sudut Segitiga = 180° Atau Tidak
+    totalSudut = alfa+beta+90;
+
+    cout << "Nilai r (Sisi Miring)      = " << r << endl;
+    cout << "Besar Sudut α              = " << alfa << "°" << endl;
+    cout << "Besar Sudut β              = " << beta << "°" << endl;
+    cout << "Total Sudut                = " << totalSudut << "°" << endl;
+    cout << "Luas Segitiga              = " << luas << "cm2" << endl;
+    cout << endl;
+    return 0;
+}
