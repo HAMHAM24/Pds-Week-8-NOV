@@ -1,0 +1,38 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main(){
+    float A, B, C, D, x1, x2;
+    cout << endl;
+    cout << "Masukkan Nilai A          : "; cin >> A;
+    cout << "Masukkan Nilai B          : "; cin >> B;
+    cout << "Masukkan NIlai C          : "; cin >> C;
+    cout << endl;
+
+    // Mencari D
+    D = pow(B,2) - 4*A*C;
+    
+    // Apabila Nilai D > 0
+    if(D > 0){
+    // Mencari x1
+    x1 = (-B + sqrt(D))/2*A;
+    // Mencari x2
+    x2 = (-B - sqrt(D))/2*A;
+    cout << "Nilai X1                  = " << x1 << endl;
+    cout << "Nilai X2                  = " << x2 << endl;
+    }
+    // Apabila Nilai D = 0
+    else if(D == 0){ 
+        x1 = (-B + sqrt(D))/2*A;
+        x2 == x1;
+        cout << "Nilai X1 dan X2 Sama, Yakni = " << x1 << endl;
+    }else{
+        cout << "Nilai Bersifat Imajiner" << endl;
+    }
+
+    
+    cout << endl;
+
+    return 0; 
+}
